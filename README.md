@@ -6,6 +6,7 @@ Neste repositório você encontrará:
 rabbitmq;
 - Implementação de alguns tutoriais disponíveis no site do rabbitmq:
     - https://www.rabbitmq.com/tutorials/tutorial-one-php.html
+    - https://www.rabbitmq.com/tutorials/tutorial-two-php.html
 
 # Como funciona o RabbitMQ
 (Referência: https://www.rabbitmq.com/tutorials/tutorial-one-php.html)
@@ -74,3 +75,11 @@ O RabbitMQ age como se fosse uma agência dos correios. Desta forma, ele é resp
         - Execute o comando: rabbitmqctl set_user_tags {nome_usuario} administrator
 
 **Pronto!** Agora, mãos na massa.
+
+# Rodando os tutoriais do rabbitmq
+
+- Faça clone do repositório
+- Acesse a pasta do tutorial
+- Abra o CMD e digite "composer install". Se você não tiver o composer, realize a instalação através do link: https://getcomposer.org/.
+- Através do terminal digite: php send.php (para simular um producer);
+- Através do terminal digite: php receive.php (para simular um consumer);

@@ -1,0 +1,12 @@
+{
+    "name": "pc/tutorial1",
+    "authors": [
+        {
+            "name": "Gustavo Carvalho",
+            "email": "gustavocarvalhogscrj@gmail.com"
+        }
+    ],
+    "require": {
+        "php-amqplib/php-amqplib": ">=2.9.0"
+    }
+}
