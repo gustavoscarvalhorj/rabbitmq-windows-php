@@ -5,9 +5,7 @@ Neste repositório você encontrará:
 - Processo de instalação e configurações básicas do 
 rabbitmq;
 - Implementação de alguns tutoriais disponíveis no site do rabbitmq:
-    - https://www.rabbitmq.com/tutorials/tutorial-one-php.html
-    - https://www.rabbitmq.com/tutorials/tutorial-two-php.html
-
+    
 # Como funciona o RabbitMQ
 (Referência: https://www.rabbitmq.com/tutorials/tutorial-one-php.html)
 
@@ -29,6 +27,7 @@ O RabbitMQ age como se fosse uma agência dos correios. Desta forma, ele é resp
 - **Channel:** Uma conexão virtual dentro de uma conexão. Quando publicamos ou consumimos mensagens de uma **queue**, fazemos isso através de um **channel**.
 
 - **Exchange:** Recebe mensagem de um producer e insere as mensagens nas queues dependendo de regras definidas pelo tipo do exchange. Para receber mensagens, uma queue precisa estar "linkada" a pelo menos um exchange.
+    - Existe vários tipos de exchange: direct, topic, headers e fanout. Cada tipo trabalha de uma forma diferente.
 
 - **Binding:** Um **bind** é um link entre a queue e o exchange.
 
@@ -83,3 +82,23 @@ O RabbitMQ age como se fosse uma agência dos correios. Desta forma, ele é resp
 - Abra o CMD e digite "composer install". Se você não tiver o composer, realize a instalação através do link: https://getcomposer.org/.
 - Através do terminal digite: php send.php (para simular um producer);
 - Através do terminal digite: php receive.php (para simular um consumer);
+
+# Sobre os tutoriais
+
+- Tutorial 1 (https://www.rabbitmq.com/tutorials/tutorial-one-php.html):
+    - Exemplo básico com um 1 producer e 1 consumer.
+
+- Tutorial 2 (https://www.rabbitmq.com/tutorials/tutorial-two-php.html)
+    - Conceito de **work queues**
+    - 1 producer enviando mensagem
+    - N consumers recebendo mensagens de forma distribuida;
+    - Ex: Considerando que temos 2 **consumers**, 6 mensagens serão enviadas por 1 **producer** e cada consumer receber 3 mensagens; 
+
+- Tutorial 3 (https://www.rabbitmq.com/tutorials/tutorial-three-php.html)
+    - Conceito de **publish/subscribe** e de **fanout** exchange;
+    - 1 producer enviando mensagem
+    - N consumers recebendo a mesma mensagem;
+    - Ex: Considerando que temos 2 **consumers**, 6 mensagens serão enviadas por 1 **producer** e cada consumer receberá 6 mensagens;
+
+
+
