@@ -55,7 +55,7 @@ O RabbitMQ age como se fosse uma agência dos correios. Desta forma, ele é resp
     - Abrir os serviços do Windows;
     - Procurar por RabbitMQ e verificar se o serviço está com status de "Em execução";
     - Caso não esteja, basta clicar com o botão direito do mouse e clicar em "Iniciar";
-- Ao chegar nesse ponto, você tem o rabbitmq rodando na sua estação de trabalho. Entretanto, o mesmo está rodando somente em background e você só consegue acesso a ele através do CMD.
+- Ao chegar nesse ponto, o rabbitmq estará rodando na sua estação de trabalho. Entretanto, o mesmo está rodando somente em background e você só conseguirá acesso à ele através do CMD.
 
 # Criando usuário e subindo interface web
 
